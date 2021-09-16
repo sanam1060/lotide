@@ -12,9 +12,13 @@ const assertEqual = function(actual, expected) {
 
 
 const head = function(list) {
-  return list[0];
+  if (list) {
+    return list [0];
+  } else {
+    return "undefinded";
+  }
 };
 
 //TEST CODE
-assertEqual(head([5,6,7]), 5);
+assertEqual(head(), "undefinded");
 assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
